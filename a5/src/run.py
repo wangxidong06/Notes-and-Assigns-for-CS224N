@@ -61,6 +61,10 @@ if args.variant == 'vanilla':
     model = model.GPT(mconf).to(device)
 elif args.variant == 'synthesizer':
     pass  # TODO [part g]: Make some other model here
+    mconf.synthesizer = True
+    model = model.GPT(mconf).to(device)
+    
+
 
 # From here on, your code should be identical independent of which
 # variant (vanilla or synthesizer) has been chosen.
@@ -148,7 +152,7 @@ elif args.function == 'finetune':
 
     # 1. If args.reading_params_path is specified, load these parameters into the model
     if args.reading_params_path is not None:
-        model._load_state_dict(torch.load(args.reading_params_path))
+        model.load_state_dict(torch.load(args.reading_params_path))
         #   Hyperparameters for finetuning WITH a pretrained model:
         tconf = trainer.TrainerConfig(
             max_epochs=10,
