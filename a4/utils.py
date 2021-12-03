@@ -28,10 +28,10 @@ def pad_sents(sents, pad_token):
     """
     sents_padded = []
 
-    ### YOUR CODE HERE (~6 Lines)
-
-
-    ### END YOUR CODE
+    corpus_size = len(sents)
+    lens = [len(i) for i in sents] # cache it for later use
+    max_lens = max(lens)
+    sents_padded = [sents[i] + [pad_token] * (max_lens - lens[i]) for i in range(corpus_size)] # shape N x max_lens
 
     return sents_padded
 
