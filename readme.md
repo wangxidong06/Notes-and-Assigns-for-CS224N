@@ -34,7 +34,7 @@
 
 给定一组数据 或者可以看作一个向量  用softmax可以给出他们的一个概率分布：
 
-<img src="readme.assets/image-20210903111751793.png" alt="image-20210903111751793" style="zoom:20%;" />
+<img src="readme.assets/image-20210903111751793.png" alt="image-20210903111751793" style="zoom:10%;" />
 
 max:是因为最大的那个数据的概率(相比与直接平均)
 
@@ -69,7 +69,7 @@ softmax函数当其K=2时 依据1进行变形就会变为logistic regression:
 
 word2vec C 代码实现了一个公式，用于计算在词汇表中保留给定单词的概率：
 
-<img src="readme.assets/image-20210907145855001.png" alt="image-20210907145855001" style="zoom: 20%;" /> 
+<img src="readme.assets/image-20210907145855001.png" alt="image-20210907145855001" style="zoom: 10%;" /> 
 
 z(wi) 是语料库中属于该词的总词的概率分数
 
@@ -85,7 +85,7 @@ z(wi) 是语料库中属于该词的总词的概率分数
 
 - 选择负样本： “负样本”（即我们将训练输出 0 的 5 个输出词）使用“一元分布”选择，其中更频繁的词更有可能被选为负样本。即利用单词出现的概率作为选择概率。作者在他们的论文中尝试了对该等式的多种变体，其中表现最好的是将字数提高到 3/4 次方：
 
-  <img src="readme.assets/image-20210907151509564.png" alt="image-20210907151509564" style="zoom:15%;" />
+  <img src="readme.assets/image-20210907151509564.png" alt="image-20210907151509564" style="zoom:10%;" />
 
   该等式倾向于增加出现频率较低的词的概率并降低出现频率较高的词的概率
 
@@ -189,7 +189,7 @@ SVD=TruncatedSVD(n_components=k, n_iter=n_iters, random_state=42)
 
   > information(x) = h(x) = -log( p(x) )  log以2为底  所以衡量信息信息度量的单位是比特
 
-  <img src="readme.assets/image-20210915213548739.png" alt="image-20210915213548739" style="zoom: 15%;" /> 
+  <img src="readme.assets/image-20210915213548739.png" alt="image-20210915213548739" style="zoom: 10%;" /> 
 
 - 计算随机变量的熵：
 
@@ -199,7 +199,7 @@ SVD=TruncatedSVD(n_components=k, n_iter=n_iters, random_state=42)
 
   最低熵是针对具有概率为 1.0（确定性）的单个事件的随机变量计算的。 随机变量的最大熵是所有事件的可能性相等。
 
-  <img src="readme.assets/image-20210915213524961.png" alt="image-20210915213524961" style="zoom: 15%;" /> 
+  <img src="readme.assets/image-20210915213524961.png" alt="image-20210915213524961" style="zoom: 10%;" /> 
 
   > 注意，在计算熵时，必须为概率添加一个很小的值，以避免计算零值的对数，这会导致无穷大而不是数字。
 
@@ -282,7 +282,7 @@ https://matplotlib.org/stable/gallery/index.html
 
 -  Xavier 初始化的方差与扇入 nin（前一层大小）和扇出 nout（下一层大小）成反比：
 
-<img src="readme.assets/image-20210922215346144.png" alt="image-20210922215346144" style="zoom: 15%;" />
+<img src="readme.assets/image-20210922215346144.png" alt="image-20210922215346144" style="zoom: 5%;" />
 
 #### 4. 最优化：
 
@@ -298,15 +298,15 @@ https://matplotlib.org/stable/gallery/index.html
 
   RMSProp 算法 (Hinton, 2012) 修改 AdaGrad 以在非凸设定下效果更好，改变梯度积累为指数加权的移动平均。 AdaGrad 旨在应用于凸问题时快速收敛。当应用于非凸函数训练神经网络时，学习轨迹可能穿过了很多不同的结构，最终到达一个局部是凸碗的区域。 AdaGrad 根据平方梯度的整个历史收缩学习率，可能使得学习率在达到这样的凸结构前就变得太小了。 RMSProp 使用指数衰减平均以丢弃遥远过去的历史，使其能够在找到凸碗状结构后快速收敛，它就像一个初始化于该碗状结构的 AdaGrad 算法实例。RMSProp 的标准形式如算法 8.5 所示，结合 Nesterov 动量的形式如算法 8.6 所示。相比于 AdaGrad，使用移动平均引入了一个新的超参数ρ，用来控制移动平均的长度范围。经验上， RMSProp 已被证明是一种有效且实用的深度神经网络优化算法。目前它是深度学习从业者经常采用的优化方法之一。
 
-  <img src="https://img-blog.csdn.net/20180608181839772?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NDYyODQ5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" style="zoom: 25%;" />  
+  <img src="https://img-blog.csdn.net/20180608181839772?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NDYyODQ5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" style="zoom: 10%;" />  
 
-  <img src="https://img-blog.csdn.net/20180608182411239?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NDYyODQ5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" style="zoom:33%;" /> 
+  <img src="https://img-blog.csdn.net/20180608182411239?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NDYyODQ5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" style="zoom:10%;" /> 
 
 - Adam [在许多情况下，相当好的、安全的]
 
   Adam (Kingma and Ba, 2014) 是另一种学习率自适应的优化算法，如算法 8.7 所示。 “Adam’’ 这个名字派生自短语 “adaptive moments’’。早期算法背景下，它也许最好被看作结合 RMSProp 和具有一些重要区别的动量的变种。首先，在 Adam 中，动量直接并入了梯度一阶矩（指数加权）的估计。将动量加入 RMSProp 最直观的方法是将动量应用于缩放后的梯度。结合缩放的动量使用没有明确的理论动机。其次， Adam 包括偏置修正，修正从原点初始化的一阶矩（动量项）和（非中心的）二阶矩的估计（算法 8.7 ）。 RMSProp 也采用了（非中心的）二阶矩估计，然而缺失了修正因子。因此，不像 Adam，RMSProp 二阶矩估计可能在训练初期有很高的偏置。Adam 通常被认为对超参数的选择相当鲁棒，尽管学习率有时需要从建议的默认修改。
 
-  <img src="https://img-blog.csdn.net/20180608182425142?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NDYyODQ5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" style="zoom: 33%;" /> 
+  <img src="https://img-blog.csdn.net/20180608182425142?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5NDYyODQ5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述" style="zoom: 20%;" /> 
 
 - SparseAdam
 
@@ -318,7 +318,7 @@ https://matplotlib.org/stable/gallery/index.html
 
 - 手动：每 k 个 epoch 将学习率减半
 
-- 通过公式：<img src="readme.assets/image-20210922221639273.png" alt="image-20210922221639273" style="zoom:20%;" /> 
+- 通过公式：<img src="readme.assets/image-20210922221639273.png" alt="image-20210922221639273" style="zoom:10%;" /> 
 
   > epoch[对数据的一次传递(打乱或采样)]
 
@@ -394,7 +394,7 @@ https://blog.csdn.net/u010159842/article/details/109326409
 
   定义：根据预测结果将预测样本排序，最有可能为正样本的在前，最不可能的在后，依次将样本预测为正样本，分别计算当前的精确率和召回率，绘制P-R曲线。
 
-<img src="https:////upload-images.jianshu.io/upload_images/14162570-7966eed87c9fb97d.png?imageMogr2/auto-orient/strip|imageView2/2/w/795/format/webp" alt="img" style="zoom:50%;" /> 
+<img src="https:////upload-images.jianshu.io/upload_images/14162570-7966eed87c9fb97d.png?imageMogr2/auto-orient/strip|imageView2/2/w/795/format/webp" alt="img" style="zoom:30%;" /> 
 
 - F1 值 定义：(2 * P * R)/(P + R)
 
@@ -473,11 +473,11 @@ https://blog.csdn.net/u010159842/article/details/109326409
 
 - 区分 微分 梯度 偏导数
 
-  <img src="readme.assets/image-20210926101952693.png" alt="image-20210926101952693" style="zoom: 40%;" />
+  <img src="readme.assets/image-20210926101952693.png" alt="image-20210926101952693" style="zoom: 20%;" />
 
 - 注意在**Rn到R**的关系中(即只有一个输出函数/输出矩阵有一个维度为一维) Jacobian行列式与梯度之间有一个转置关系<img src="readme.assets/image-20210926102137208.png" alt="image-20210926102137208" style="zoom: 67%;" />
 
-  因为定义的时候Jacobian就是个行向量<img src="readme.assets/image-20210926102533806.png" alt="image-20210926102533806" style="zoom: 50%;" />
+  因为定义的时候Jacobian就是个行向量<img src="readme.assets/image-20210926102533806.png" alt="image-20210926102533806" style="zoom: 20%;" />
 
   但是梯度被定义为列向量 所以之间有个转置的关系
 
@@ -1031,11 +1031,11 @@ proof:
 
 如果：假设协方差矩阵是 Σi = αI， α 非常小。 则可以根据 µi 设计一个查询 <img src="readme.assets/image-20211118120456712.png" alt="image-20211118120456712" style="zoom:33%;" />  使得 c ≈ 0.5*(va + vb)
 
-如果：假设<img src="readme.assets/image-20211118115123919.png" alt="image-20211118115123919" style="zoom: 20%;" /> 其余Σi不变  如果还是查询 <img src="readme.assets/image-20211118120456712.png" alt="image-20211118120456712" style="zoom:20%;" />不变  依旧可以平均的观察va vb  
+如果：假设<img src="readme.assets/image-20211118115123919.png" alt="image-20211118115123919" style="zoom: 10%;" /> 其余Σi不变  如果还是查询 <img src="readme.assets/image-20211118120456712.png" alt="image-20211118120456712" style="zoom:10%;" />不变  依旧可以平均的观察va vb  
 
 proof:
 
-假设<img src="readme.assets/image-20211118121206641.png" alt="image-20211118121206641" style="zoom:20%;" />    则<img src="readme.assets/image-20211118121230863.png" alt="image-20211118121230863" style="zoom: 20%;" />
+假设<img src="readme.assets/image-20211118121206641.png" alt="image-20211118121206641" style="zoom:10%;" />    则<img src="readme.assets/image-20211118121230863.png" alt="image-20211118121230863" style="zoom: 10%;" />
 
 
 
@@ -1049,7 +1049,7 @@ proof:
 
 具体来说 假如：
 
-<img src="readme.assets/image-20211118111926378.png" alt="image-20211118111926378" style="zoom: 20%;" /> 
+<img src="readme.assets/image-20211118111926378.png" alt="image-20211118111926378" style="zoom: 10%;" /> 
 
 其中 ua, ub, uc, ud 是 Rd 中相互正交的向量，每个向量都具有相等的范数 ∥ua∥ = ∥ub∥ = ∥uc∥ = ∥ud∥ = β，其中 β 非常大
 
@@ -1061,6 +1061,6 @@ proof:
 
   可以指定矩阵 K、Q、V如下 使得 c2 ≈ ub，并且 c1 ≈ ub − uc。
 
-<img src="readme.assets/image-20211118112627662.png" alt="image-20211118112627662" style="zoom:20%;" />               proof：<img src="readme.assets/image-20211118112722282.png" alt="image-20211118112722282" style="zoom:10%;" />  
+<img src="readme.assets/image-20211118112627662.png" alt="image-20211118112627662" style="zoom:10%;" />               proof：<img src="readme.assets/image-20211118112722282.png" alt="image-20211118112722282" style="zoom:10%;" />  
 
 **所以KQV可以把已有的食材打碎成基本单位 然后通过基本单位重组 再造新的食材 并以此为基本再造餐点**
