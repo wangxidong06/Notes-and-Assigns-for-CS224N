@@ -12,7 +12,7 @@
 
 #### 2. 关于点积的疑惑点：
 
-[Mark] <img src="readme.assets/image-20210903110729283.png" alt="image-20210903110729283" style="zoom:50%;" />
+[Mark] <img src="readme.assets/image-20210903110729283.png" alt="image-20210903110729283" style="zoom:30%;" />
 
 为什么 点积越大与相似呢 比如说A,B 只有在A+B=C(定值) 时 A=B时点积最大 但是在这里 ui vi的和并不是一定的呀
 
@@ -34,7 +34,7 @@
 
 给定一组数据 或者可以看作一个向量  用softmax可以给出他们的一个概率分布：
 
-<img src="readme.assets/image-20210903111751793.png" alt="image-20210903111751793" style="zoom:33%;" />
+<img src="readme.assets/image-20210903111751793.png" alt="image-20210903111751793" style="zoom:20%;" />
 
 max:是因为最大的那个数据的概率(相比与直接平均)
 
@@ -69,7 +69,7 @@ softmax函数当其K=2时 依据1进行变形就会变为logistic regression:
 
 word2vec C 代码实现了一个公式，用于计算在词汇表中保留给定单词的概率：
 
-<img src="readme.assets/image-20210907145855001.png" alt="image-20210907145855001" style="zoom: 30%;" /> 
+<img src="readme.assets/image-20210907145855001.png" alt="image-20210907145855001" style="zoom: 20%;" /> 
 
 z(wi) 是语料库中属于该词的总词的概率分数
 
@@ -85,7 +85,7 @@ z(wi) 是语料库中属于该词的总词的概率分数
 
 - 选择负样本： “负样本”（即我们将训练输出 0 的 5 个输出词）使用“一元分布”选择，其中更频繁的词更有可能被选为负样本。即利用单词出现的概率作为选择概率。作者在他们的论文中尝试了对该等式的多种变体，其中表现最好的是将字数提高到 3/4 次方：
 
-  <img src="readme.assets/image-20210907151509564.png" alt="image-20210907151509564" style="zoom:25%;" />
+  <img src="readme.assets/image-20210907151509564.png" alt="image-20210907151509564" style="zoom:15%;" />
 
   该等式倾向于增加出现频率较低的词的概率并降低出现频率较高的词的概率
 
@@ -189,7 +189,7 @@ SVD=TruncatedSVD(n_components=k, n_iter=n_iters, random_state=42)
 
   > information(x) = h(x) = -log( p(x) )  log以2为底  所以衡量信息信息度量的单位是比特
 
-  <img src="readme.assets/image-20210915213548739.png" alt="image-20210915213548739" style="zoom: 33%;" /> 
+  <img src="readme.assets/image-20210915213548739.png" alt="image-20210915213548739" style="zoom: 15%;" /> 
 
 - 计算随机变量的熵：
 
@@ -199,7 +199,7 @@ SVD=TruncatedSVD(n_components=k, n_iter=n_iters, random_state=42)
 
   最低熵是针对具有概率为 1.0（确定性）的单个事件的随机变量计算的。 随机变量的最大熵是所有事件的可能性相等。
 
-  <img src="readme.assets/image-20210915213524961.png" alt="image-20210915213524961" style="zoom: 33%;" /> 
+  <img src="readme.assets/image-20210915213524961.png" alt="image-20210915213524961" style="zoom: 15%;" /> 
 
   > 注意，在计算熵时，必须为概率添加一个很小的值，以避免计算零值的对数，这会导致无穷大而不是数字。
 
@@ -282,7 +282,7 @@ https://matplotlib.org/stable/gallery/index.html
 
 -  Xavier 初始化的方差与扇入 nin（前一层大小）和扇出 nout（下一层大小）成反比：
 
-<img src="readme.assets/image-20210922215346144.png" alt="image-20210922215346144" style="zoom: 33%;" />
+<img src="readme.assets/image-20210922215346144.png" alt="image-20210922215346144" style="zoom: 15%;" />
 
 #### 4. 最优化：
 
@@ -318,7 +318,7 @@ https://matplotlib.org/stable/gallery/index.html
 
 - 手动：每 k 个 epoch 将学习率减半
 
-- 通过公式：<img src="readme.assets/image-20210922221639273.png" alt="image-20210922221639273" style="zoom:33%;" /> 
+- 通过公式：<img src="readme.assets/image-20210922221639273.png" alt="image-20210922221639273" style="zoom:20%;" /> 
 
   > epoch[对数据的一次传递(打乱或采样)]
 
@@ -473,7 +473,7 @@ https://blog.csdn.net/u010159842/article/details/109326409
 
 - 区分 微分 梯度 偏导数
 
-  <img src="readme.assets/image-20210926101952693.png" alt="image-20210926101952693" style="zoom: 50%;" />
+  <img src="readme.assets/image-20210926101952693.png" alt="image-20210926101952693" style="zoom: 40%;" />
 
 - 注意在**Rn到R**的关系中(即只有一个输出函数/输出矩阵有一个维度为一维) Jacobian行列式与梯度之间有一个转置关系<img src="readme.assets/image-20210926102137208.png" alt="image-20210926102137208" style="zoom: 67%;" />
 
@@ -497,35 +497,35 @@ https://blog.csdn.net/u010159842/article/details/109326409
 
 - 矩阵乘以列向量 并对列向量求导
 
-  <img src="C:\Users\wangxidong\AppData\Roaming\Typora\typora-user-images\image-20210926110102480.png" alt="image-20210926110102480" style="zoom:50%;" />    <img src="readme.assets/image-20210926110126823.png" alt="image-20210926110126823" style="zoom:38%;" />
+  <img src="readme.assets/image-20210926110102480.png" alt="image-20210926110102480" style="zoom:20%;" />    <img src="readme.assets/image-20210926110126823.png" alt="image-20210926110126823" style="zoom:20%;" />
 
 - 行向量乘以矩阵 并对行向量求导
 
-  <img src="readme.assets/image-20210926110205589.png" alt="image-20210926110205589" style="zoom:50%;" />     <img src="C:\Users\wangxidong\AppData\Roaming\Typora\typora-user-images\image-20210927134743695.png" alt="image-20210927134743695" style="zoom:33%;" />
+  <img src="readme.assets/image-20210926110205589.png" alt="image-20210926110205589" style="zoom:20%;" />     <readme.assets/image-20210927134743695.png" alt="image-20210927134743695" style="zoom:20%;" />
 
 - 向量对自己求导
 
-  <img src="C:\Users\wangxidong\AppData\Roaming\Typora\typora-user-images\image-20210927134825216.png" alt="image-20210927134825216" style="zoom:50%;" />     <img src="readme.assets/image-20210927134848084.png" alt="image-20210927134848084" style="zoom:33%;" />
+  <img src="readme.assets/image-20210927134825216.png" alt="image-20210927134825216" style="zoom:20%;" />     <img src="readme.assets/image-20210927134848084.png" alt="image-20210927134848084" style="zoom:20%;" />
 
 - 作用在矩阵元素上的函数 对矩阵求导
 
-  <img src="readme.assets/image-20210927135024680.png" alt="image-20210927135024680" style="zoom:50%;" />     <img src="C:\Users\wangxidong\AppData\Roaming\Typora\typora-user-images\image-20210927135045869.png" alt="image-20210927135045869" style="zoom:33%;" />
+  <img src="readme.assets/image-20210927135024680.png" alt="image-20210927135024680" style="zoom:20%;" />     <readme.assets/image-20210927135045869.png" alt="image-20210927135045869" style="zoom:20%;" />
 
 - 矩阵乘以列向量 并对矩阵求导
 
-  <img src="C:\Users\wangxidong\AppData\Roaming\Typora\typora-user-images\image-20210927135237137.png" alt="image-20210927135237137" style="zoom:25%;" />    <img src="readme.assets/image-20210927135323217.png" alt="image-20210927135323217" style="zoom:33%;" />
+  <img src="readme.assets/image-20210927135237137.png" alt="image-20210927135237137" style="zoom:20%;" />    <img src="readme.assets/image-20210927135323217.png" alt="image-20210927135323217" style="zoom:20%;" />
 
 - 行向量乘以矩阵 并对矩阵求导
 
-  <img src="C:\Users\wangxidong\AppData\Roaming\Typora\typora-user-images\image-20210927135451924.png" alt="image-20210927135451924" style="zoom:50%;" />    <img src="readme.assets/image-20210927135523022.png" alt="image-20210927135523022" style="zoom:33%;" />
+  <img src="readme.assets/image-20210927135451924.png" alt="image-20210927135451924" style="zoom:20%;" />    <img src="readme.assets/image-20210927135523022.png" alt="image-20210927135523022" style="zoom:20%;" />
 
 - 与 logits 相关的交叉熵损失 
 
-  <img src="readme.assets/image-20210927201017591.png" alt="image-20210927201017591" style="zoom: 67%;"/> 
+  <img src="readme.assets/image-20210927201017591.png" alt="image-20210927201017591" style="zoom: 30%;"/> 
 
-  <img src="readme.assets/image-20210927201053330.png" alt="image-20210927201053330" style="zoom:33%;" />  (如果为y是列向量的话 就转置一下)
+  <img src="readme.assets/image-20210927201053330.png" alt="image-20210927201053330" style="zoom:15%;" />  (如果为y是列向量的话 就转置一下)
 
-  <img src="readme.assets/扫描全能王 2021-09-27 20.14.jpg" alt="扫描全能王 2021-09-27 20.14" style="zoom: 33%;" />
+  <img src="readme.assets/扫描全能王 2021-09-27 20.14.jpg" alt="扫描全能王 2021-09-27 20.14" style="zoom: 15%;" />
 
 - 矩阵求导如果没有square型的矩阵 则只有唯一的满足矩阵乘法性质的排列和转置 所以可以用这个性质去检验
 
@@ -858,7 +858,7 @@ Hal Varian: How to Build an Economic Model in Your Spare Time
 ##### 4.7 何时停止
 
 - 您可以通过研讨会上的反应来判断您的作品何时准备好发表：人们不再提问。 （或者至少，读过你论文的人不再提问。）如果你听从了我的建议，你已经在你的论文中提出了他们的问题并回答了他们。
-- **一旦你提出了你的观点，就停下来。很多论文拖得太久了。**我之前说过，人们只记得你研讨会的大约 20 分钟（如果你幸运的话），**他们只记得你的论文的大约 10 页。你应该能够在那个长度内说出你想说的大部分内容。**
+- 一旦你提出了你的观点，就停下来。很多论文拖得太久了。我之前说过，人们只记得你研讨会的大约 20 分钟（如果你幸运的话），**他们只记得你的论文的大约 10 页。你应该能够在那个长度内说出你想说的大部分内容。**
 - 写完论文后，您可以将其提交。**在将文章发送之前，您应该用细齿梳仔细检查文章。没有什么比在他们处理的文章中发现错别字、缺少参考文献和草率编辑更让编辑或审稿人失望的了**。
 
 
@@ -983,42 +983,17 @@ Hal Varian: How to Build an Economic Model in Your Spare Time
 
 ## Project Proposal
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Lecture 9 transformers
 
 #### 1. 一些基本知识
 
 ### Suggested Reading:
 
-
-
 ## Lecture 10 pretraining
 
 #### 1. 一些基本知识
 
 ### Suggested Reading:
-
-
-
-
 
 ## Assignment 5 
 
@@ -1034,13 +1009,13 @@ Hal Varian: How to Build an Economic Model in Your Spare Time
 
 如果：假设协方差矩阵是 Σi = αI， α 非常小。 则可以根据 µi 设计一个查询 <img src="readme.assets/image-20211118114955845.png" alt="image-20211118114955845" style="zoom: 33%;" /> 使得 c ≈ 0.5*(va + vb)
 
-如果：假设<img src="readme.assets/image-20211118115123919.png" alt="image-20211118115123919" style="zoom: 40%;" /> 其余Σi不变 如果还是查询 <img src="C:\Users\wangxidong\AppData\Roaming\Typora\typora-user-images\image-20211118114955845.png" alt="image-20211118114955845" style="zoom: 33%;" />不变 则很难平均的观察va vb  
+如果：假设<img src="readme.assets/image-20211118115123919.png" alt="image-20211118115123919" style="zoom: 20%;" /> 其余Σi不变 如果还是查询 <img src="readme.assets/image-20211118114955845.png" alt="image-20211118114955845" style="zoom: 20%;" />不变 则很难平均的观察va vb  
 
 proof:
 
-假设<img src="readme.assets/image-20211118115525470.png" alt="image-20211118115525470" style="zoom: 40%;" /> 则<img src="C:\Users\wangxidong\AppData\Roaming\Typora\typora-user-images\image-20211118115613140.png" alt="image-20211118115613140" style="zoom:33%;" />   
+假设<img src="readme.assets/image-20211118115525470.png" alt="image-20211118115525470" style="zoom: 20%;" /> 则<img src="readme.assets/image-20211118115613140.png" alt="image-20211118115613140" style="zoom:33%;" />   
 
-因为 <img src="readme.assets/image-20211118115649720.png" alt="image-20211118115649720" style="zoom: 40%;" />   a的范数会在基准附近左右摆动  所以c的值会在va vb 间来回摆动 很难平均的观察va vb  
+因为 <img src="readme.assets/image-20211118115649720.png" alt="image-20211118115649720" style="zoom: 20%;" />   a的范数会在基准附近左右摆动  所以c的值会在va vb 间来回摆动 很难平均的观察va vb  
 
 
 
@@ -1056,11 +1031,11 @@ proof:
 
 如果：假设协方差矩阵是 Σi = αI， α 非常小。 则可以根据 µi 设计一个查询 <img src="readme.assets/image-20211118120456712.png" alt="image-20211118120456712" style="zoom:33%;" />  使得 c ≈ 0.5*(va + vb)
 
-如果：假设<img src="readme.assets/image-20211118115123919.png" alt="image-20211118115123919" style="zoom: 40%;" /> 其余Σi不变  如果还是查询 <img src="C:\Users\wangxidong\AppData\Roaming\Typora\typora-user-images\image-20211118120456712.png" alt="image-20211118120456712" style="zoom:33%;" />不变  依旧可以平均的观察va vb  
+如果：假设<img src="readme.assets/image-20211118115123919.png" alt="image-20211118115123919" style="zoom: 20%;" /> 其余Σi不变  如果还是查询 <img src="readme.assets/image-20211118120456712.png" alt="image-20211118120456712" style="zoom:20%;" />不变  依旧可以平均的观察va vb  
 
 proof:
 
-假设<img src="readme.assets/image-20211118121206641.png" alt="image-20211118121206641" style="zoom:50%;" />    则<img src="C:\Users\wangxidong\AppData\Roaming\Typora\typora-user-images\image-20211118121230863.png" alt="image-20211118121230863" style="zoom: 40%;" />
+假设<img src="readme.assets/image-20211118121206641.png" alt="image-20211118121206641" style="zoom:20%;" />    则<img src="readme.assets/image-20211118121230863.png" alt="image-20211118121230863" style="zoom: 20%;" />
 
 
 
@@ -1074,11 +1049,11 @@ proof:
 
 具体来说 假如：
 
-<img src="readme.assets/image-20211118111926378.png" alt="image-20211118111926378" style="zoom: 50%;" /> 
+<img src="readme.assets/image-20211118111926378.png" alt="image-20211118111926378" style="zoom: 20%;" /> 
 
 其中 ua, ub, uc, ud 是 Rd 中相互正交的向量，每个向量都具有相等的范数 ∥ua∥ = ∥ub∥ = ∥uc∥ = ∥ud∥ = β，其中 β 非常大
 
-- 如果没有<img src="readme.assets/image-20211118112026535.png" alt="image-20211118112026535" style="zoom: 50%;" /> 这一步
+- 如果没有<img src="readme.assets/image-20211118112026535.png" alt="image-20211118112026535" style="zoom: 20%;" /> 这一步
 
   c2 绝对不可能通过将 ud 或 uc 添加到 x2 来近似 ub 因为ub 和 ud(uc)在c2中是平等增加的
 
@@ -1086,43 +1061,6 @@ proof:
 
   可以指定矩阵 K、Q、V如下 使得 c2 ≈ ub，并且 c1 ≈ ub − uc。
 
-<img src="C:\Users\wangxidong\AppData\Roaming\Typora\typora-user-images\image-20211118112627662.png" alt="image-20211118112627662" style="zoom:40%;" />               proof：<img src="readme.assets/image-20211118112722282.png" alt="image-20211118112722282" style="zoom:40%;" />  
+<img src="readme.assets/image-20211118112627662.png" alt="image-20211118112627662" style="zoom:20%;" />               proof：<img src="readme.assets/image-20211118112722282.png" alt="image-20211118112722282" style="zoom:10%;" />  
 
 **所以KQV可以把已有的食材打碎成基本单位 然后通过基本单位重组 再造新的食材 并以此为基本再造餐点**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
