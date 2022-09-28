@@ -2,7 +2,7 @@
 
 - You can check notes in [Appendix A](#A)  
 
-  > [Here](./note.pdf) is a more readable version in pdf
+  > [Here](./note_cs_224N.pdf) is a more readable version in pdf
 
 - Homework codes :
   - [Assignment1](./a1)
